@@ -38,7 +38,6 @@ def addItems(data, cuisine):
                 if rec["image_url"] == "":
                     rec.pop("image_url", None)
 
-                # print(rec)
                 batch.put_item(Item=rec)
                 sleep(0.001)
             except Exception as e:
